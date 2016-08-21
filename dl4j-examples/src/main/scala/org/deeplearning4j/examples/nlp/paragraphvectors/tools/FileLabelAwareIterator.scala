@@ -43,6 +43,8 @@ class FileLabelAwareIterator protected(protected val files: java.util.List[File]
                 line = reader.readLine()
             }
 
+            reader.close
+
             document.setContent(builder.toString())
             document.setLabel(label)
 
